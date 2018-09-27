@@ -1,14 +1,15 @@
 const express = require('express');
+const getOverview = require('../data/spreadsheet').getOverview;
 const router = express.Router();
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  const testObj = {
-    name: 'test',
-    question: 'Does this work?',
-  };
+router.get('/', async function(req, res, next) {
+  const members = await getOverview();
 
-  res.render('index', { testObj, title: 'Express' });
+  res.render('index', {
+    members,
+    title: 'TB Point Viewer'
+  });
 });
 
 module.exports = router;

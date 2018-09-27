@@ -1,4 +1,13 @@
 <h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+<p>Who are you?</p>
+<select>
+  {{#each members}}
+    <option data-id="{{@index}}" data-total-points="{{this.totalPoints}}" value="{{this.lastName}}-{{this.firstName}}">
+      {{this.firstName}} {{this.lastName}}
+    </option>
+  {{/each}}
+</select>
 
-<p>{{{testObj.name}}}: {{{testObj.question}}}</p>
+<p>You've got <span id="display-box"></span> points.</p>
+
+<script src="javascripts/display-points.js"></script>
