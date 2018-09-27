@@ -1,0 +1,14 @@
+const express = require('express');
+const router = express.Router();
+
+/* GET home page. */
+router.get('/', function(req, res, next) {
+  const testObj = {
+    name: 'test',
+    question: 'Does this work?',
+  };
+
+  res.render('index', { testObj, title: 'Express' });
+});
+
+module.exports = router;
