@@ -1,0 +1,19 @@
+.nav {
+  .nav-menu {
+    display: flex;
+    justify-content: center;
+  }
+
+  .nav-item {
+    list-style-type: none;
+    padding: 15px;
+  }
+
+  .nav-item-brand {
+    flex-basis: 300px;
+
+    & > img {
+      width: 100%;
+    }
+  }
+}

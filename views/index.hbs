@@ -1,13 +1,19 @@
-<h1>{{title}}</h1>
-<p>Who are you?</p>
-<select>
-  {{#each members}}
-    <option data-id="{{@index}}" data-total-points="{{this.totalPoints}}" value="{{this.lastName}}-{{this.firstName}}">
-      {{this.firstName}} {{this.lastName}}
-    </option>
-  {{/each}}
-</select>
+<h1>TB Point Viewer</h1>
+<p>An easy way to stay on track.</p>
 
-<p>You've got <span id="display-box"></span> points.</p>
+<div class="member-selection">
+  <p>Select a member</p>
+  <select>
+    {{#each members}}
+      <option data-id="{{@index}}" data-total-points="{{this.totalPoints}}" value="{{this.lastName}}-{{this.firstName}}">
+        {{this.firstName}} {{this.lastName}}
+      </option>
+    {{/each}}
+  </select>
+</div>
+
+<div class="hidden points-overview">
+  <p>You've got <span id="current-points"></span>/<span id="total-points">100</span> points. <span id="points-comment"></span></p>
+</div>
 
 <script src="javascripts/display-points.js"></script>

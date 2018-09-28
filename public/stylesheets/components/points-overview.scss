@@ -1,0 +1,20 @@
+.points-overview {
+  #current-points {
+    color: $brand-primary;
+    font-size: 1.5rem;
+    font-style: italic;
+    font-weight: bold;
+    margin-left: 5px;
+    margin-right: 2px;
+    vertical-align: super;
+  }
+
+  #total-points {
+    font-size: 1.5rem;
+    font-style: italic;
+    font-weight: bold;
+    margin-left: 2px;
+    margin-right: 5px;
+    vertical-align: sub;
+  }
+}

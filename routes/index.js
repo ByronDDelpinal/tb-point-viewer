@@ -7,8 +7,7 @@ router.get('/', async function(req, res, next) {
   const members = await getOverview();
 
   res.render('index', {
-    members,
-    title: 'TB Point Viewer'
+    members
   });
 });
 
