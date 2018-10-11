@@ -1,5 +1,5 @@
 .points-overview {
-  #current-points {
+  .points-partial {
     color: $brand-primary;
     font-size: 1.5rem;
     font-style: italic;
@@ -9,7 +9,7 @@
     vertical-align: super;
   }
 
-  #total-points {
+  .points-total {
     font-size: 1.5rem;
     font-style: italic;
     font-weight: bold;

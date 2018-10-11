@@ -1,8 +1,11 @@
 (function() {
-  const selectElement = document.querySelector('select');
   const currentPointsElement = document.querySelector('#current-points');
+  const committeePointsElement = document.querySelector('#committee-points');
+  const internalPointsElement = document.querySelector('#internal-points');
+  const externalPointsElement = document.querySelector('#external-points');
   const pointsCommentElement = document.querySelector('#points-comment');
   const pointsOverviewContainer = document.querySelector('.points-overview');
+  const selectElement = document.querySelector('select');
 
   const okCommentArray = [
     'There\'s still plenty of time left.',
@@ -27,7 +30,11 @@
   }
 
   selectElement.addEventListener('change', function(event) {
+    const committeePoints = parseInt(selectElement.options[selectElement.selectedIndex].dataset.committeePoints, 10);
     const currentPoints = parseInt(selectElement.options[selectElement.selectedIndex].dataset.totalPoints, 10);
+    const internalPoints = parseInt(selectElement.options[selectElement.selectedIndex].dataset.internalPoints, 10);
+    const externalPoints = parseInt(selectElement.options[selectElement.selectedIndex].dataset.externalPoints, 10);
+
     let pointsComment = '';
 
     if (currentPoints < 50) {
@@ -41,7 +48,10 @@
     }
 
     pointsOverviewContainer.classList.remove('hidden');
+    committeePointsElement.innerText = committeePoints;
     currentPointsElement.innerText = currentPoints;
+    internalPointsElement.innerText = internalPoints;
+    externalPointsElement.innerText = externalPoints;
     pointsCommentElement.innerText = pointsComment;
   });
 })();

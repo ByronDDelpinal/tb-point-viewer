@@ -1,0 +1,15 @@
+.points-breakdown {
+  margin-top: 1rem;
+
+  .points-partial,
+  .points-total {
+    font-size: 1.15rem !important;
+  }
+
+  .points-partial {
+    margin-right: 0;
+  }
+  .points-total {
+    margin-left: 0;
+  }
+}

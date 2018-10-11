@@ -66,9 +66,12 @@ const getNewToken = oAuth2Client => (
 const transformMember = dataRow => {
   if (dataRow && dataRow[0] && dataRow[1]) {
     return {
-      firstName: dataRow[1],
-      lastName: dataRow[0],
-      totalPoints: dataRow[3],
+      committeePointsTotal: dataRow[12] ? dataRow[12] : 0,
+      externalPointsTotal: dataRow[29] ? dataRow[29] : 0,
+      firstName: dataRow[1] ? dataRow[1] : 0,
+      internalPointsTotal: dataRow[32] ? dataRow[32] : 0,
+      lastName: dataRow[0] ? dataRow[0] : 0,
+      totalPoints: dataRow[3] ? dataRow[3] : 0,
     }
   }
 

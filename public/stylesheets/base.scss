@@ -1,3 +1,52 @@
+body {
+  color: $brand-gray-dark;
+  font-family: 'Roboto Slab';
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Roboto';
+  font-weight: bold;
+  margin: 1.5rem 0 0.5rem 0;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+ol {
+  padding-left: 2rem;
+
+  li {
+    list-style-type: decimal;
+    margin: 0.25rem 0;
+  }
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.25;
+}
+
+ul {
+  padding-left: 2rem;
+
+  li {
+    margin: 0.25rem 0;
+  }
+}
+
+strong {
+  font-weight: bold;
+}
+
 .hidden {
   display: none !important;
 }

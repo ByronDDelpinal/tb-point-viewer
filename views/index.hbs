@@ -1,19 +1,39 @@
 <h1>TB Point Viewer</h1>
 <p>An easy way to stay on track.</p>
 
+<h2>What are points?</h2>
+<p>Points are earned by volunteering your valuable time and effort towards various opportunities that we've </p>
+<p>While a member, you'll give back to your community and the Torchbearer's organization by accumulating "points" throughout the year. The required amount of points to stay elegible for group particiation is 100. There is no maximum, so shoot for the stars.</p>
+
 <div class="member-selection">
+  <h2>How many points do I have?</h2>
   <p>Select a member</p>
   <select>
     {{#each members}}
-      <option data-id="{{@index}}" data-total-points="{{this.totalPoints}}" value="{{this.lastName}}-{{this.firstName}}">
+      <option data-id="{{@index}}" data-committee-points="{{this.committeePointsTotal}}" data-internal-points="{{this.internalPointsTotal}}" data-external-points="{{this.externalPointsTotal}}" data-total-points="{{this.totalPoints}}" value="{{this.lastName}}-{{this.firstName}}">
         {{this.firstName}} {{this.lastName}}
       </option>
     {{/each}}
   </select>
+  <div class="hidden points-overview">
+    <p>You've got <span class="points-partial" id="current-points"></span>/<span class="points-total" id="total-points">100</span> points. <span id="points-comment"></span></p>
+    <div class="points-breakdown">
+      <p>That breaks down like this</p>
+      <ul>
+        <li>Committee Points: <span class="points-partial" id="committee-points"></span>/<span class="points-total">30</span></li>
+        <li>Internal Service Points: <span class="points-partial" id="internal-points"></span>/<span class="points-total">60</span></li>
+        <li>External Service Points: <span class="points-partial" id="external-points"></span>/<span class="points-total">30</span></li>
+      </ul>
+    </div>
+  </div>
 </div>
 
-<div class="hidden points-overview">
-  <p>You've got <span id="current-points"></span>/<span id="total-points">100</span> points. <span id="points-comment"></span></p>
-</div>
+<h2>Is there anything else I need to know?</h2>
+<ol>
+  <li>Goal to have all of your points in: <strong>November 1st</strong> for new members. <strong>December 1st</strong> for returning members.</li>
+  <li>If you're looking for opportunities to get more points, checkout our <a href="http://torchbearersakron.com/events">Events section</a> where there's always great opportunities to sign up for!</li>
+  <li>If you need to submit TB2 service hours, <a href=""></a></li>
+  <li>Have any outside service hours that still need to be submitted? <a href="https://docs.google.com/forms/d/e/1FAIpQLScXnJWjQ-U1yJ89aPndOMRjzbNu8-b5sQ1KitqxSU8D3E6jIg/viewform">You can do that here!</a></li>
+</ol>
 
 <script src="javascripts/display-points.js"></script>

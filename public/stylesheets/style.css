@@ -55,18 +55,40 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: 'Roboto'; }
+  font-family: 'Roboto';
+  font-weight: bold;
+  margin: 1.5rem 0 0.5rem 0; }
 
 h1 {
   font-size: 2rem; }
 
+h2 {
+  font-size: 1.5rem; }
+
+ol {
+  padding-left: 2rem; }
+  ol li {
+    list-style-type: decimal;
+    margin: 0.25rem 0; }
+
 p {
-  font-size: 1rem; }
+  font-size: 1rem;
+  line-height: 1.25; }
+
+ul {
+  padding-left: 2rem; }
+  ul li {
+    margin: 0.25rem 0; }
+
+strong {
+  font-weight: bold; }
 
 .hidden {
   display: none !important; }
 
 .main-content {
+  margin: 0 auto;
+  max-width: 1000px;
   padding: 20px; }
 
 .member-selection {
@@ -93,10 +115,19 @@ p {
 .nav-accent {
   background-color: #a31f34;
   height: 25px;
-  margin-bottom: 1rem;
   width: 100%; }
 
-.points-overview #current-points {
+.points-breakdown {
+  margin-top: 1rem; }
+  .points-breakdown .points-partial,
+  .points-breakdown .points-total {
+    font-size: 1.15rem !important; }
+  .points-breakdown .points-partial {
+    margin-right: 0; }
+  .points-breakdown .points-total {
+    margin-left: 0; }
+
+.points-overview .points-partial {
   color: #a31f34;
   font-size: 1.5rem;
   font-style: italic;
@@ -105,7 +136,7 @@ p {
   margin-right: 2px;
   vertical-align: super; }
 
-.points-overview #total-points {
+.points-overview .points-total {
   font-size: 1.5rem;
   font-style: italic;
   font-weight: bold;
